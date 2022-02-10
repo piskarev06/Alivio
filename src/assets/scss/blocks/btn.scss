@@ -1,0 +1,41 @@
+.btn {
+  display: inline-block;
+  padding: 20px 50px;
+
+  background: $primary;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
+  &--sign {
+    padding: 0;
+    background: none;
+
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &--rounded {
+    border-radius: 0.41em;
+  }
+
+  &--sm {
+    padding: 13px 50px;
+  }
+}

@@ -1,0 +1,167 @@
+.how-it-works {
+  padding: 170px 0 255px;
+
+  @include breakpoint(768px) {
+    padding: 80px 0;
+  }
+}
+
+.hwt__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 187px;
+
+  @include breakpoint(1360px) {
+    flex-direction: column;
+  }
+  @include breakpoint(768px) {
+    align-items: flex-start;
+  }
+  @include breakpoint(480px) {
+    margin-bottom: 130px;
+  }
+}
+
+.hwt__top-block {
+  max-width: 584px;
+  width: 100%;
+
+  &:last-child {
+    max-width: 671px;
+    width: 100%;
+  }
+  &:not(:last-child) {
+    margin-right: 130px;
+
+    @include breakpoint(1360px) {
+      margin: 0 0 60px;
+    }
+    @include breakpoint(768px) {
+      margin: 0 0 40px;
+    }
+    @include breakpoint(480px) {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+.hwt__top-subtitle {
+  margin-bottom: 35px;
+}
+
+.hwt__top-title {
+  line-height: 78px;
+}
+
+.hwt__top-text {
+  font-size: 20px;
+  line-height: 30px;
+
+  @include breakpoint(768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @include breakpoint(480px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.hwt__columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include breakpoint(1360px) {
+    justify-content: space-around;
+  }
+}
+
+.hwt__columns-item {
+  position: relative;
+
+  max-width: min-content;
+
+  &:not(:last-child) {
+    margin-right: 80px;
+
+    @include breakpoint(1360px) {
+      margin: 0 42px 150px;
+    }
+  }
+}
+
+html body .hwt__columns-item {
+  @include breakpoint(980px) {
+    max-width: 100%;
+    text-align: -webkit-center;
+
+    margin: 0 0 40px 0;
+  }
+}
+
+.colums__item {
+  &-number {
+    position: absolute;
+    top: -133px;
+    left: 0;
+
+    font-family: Georgia;
+    font-size: 150px;
+    line-height: 225px;
+
+    color: $primary;
+    opacity: 0.2;
+  }
+
+  &-title {
+    font-size: 30px;
+    line-height: 45px;
+
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  &-text {
+    font-size: 20px;
+    line-height: 30px;
+    color: #424242;
+
+    margin-bottom: 60px;
+
+    @include breakpoint(480px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.item--2 {
+  transform: translateY(204px);
+
+  @include breakpoint(1360px) {
+    transform: none;
+  }
+}
+
+.item--1 {
+  transform: translateY(23px);
+
+  @include breakpoint(1360px) {
+    transform: none;
+  }
+}
+
+.colums__item-img {
+  max-width: 390px;
+  max-height: 492px;
+  object-fit: cover;
+
+  & img {
+    @include breakpoint(980px) {
+      max-width: 100%;
+    }
+  }
+}

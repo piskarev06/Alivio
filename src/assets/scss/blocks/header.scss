@@ -1,0 +1,182 @@
+.header {
+  padding: 20px 0;
+  background-color: #fff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header__logo {
+  z-index: 5;
+
+  & img {
+    text-align: unset;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  @include breakpoint(768px) {
+    &--mobile {
+      display: block;
+    }
+  }
+}
+
+.header__btns {
+  &--mobile {
+    display: none;
+  }
+
+  @include breakpoint(768px) {
+    display: none;
+
+    &--mobile {
+      display: block;
+
+      @include breakpoint(321px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.header__btn-item {
+  &:not(:last-child) {
+    margin-right: 35px;
+
+    @include breakpoint(321px) {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(321px) {
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  // &--mobile {
+  //   @include breakpoint(321px) {
+  //     margin: 0;
+  //   }
+  // }
+}
+
+.header__menu {
+  display: none;
+
+  @include breakpoint(768px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(30, 54, 133, 0.6);
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+
+    &::before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 70px;
+      background-color: #fff;
+      z-index: 2;
+    }
+
+    &._active {
+      left: 0;
+    }
+  }
+}
+
+.header__menu-wrapper {
+  @include breakpoint(768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #fff;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 70px 15px;
+    // margin-left: auto;
+
+    z-index: 40;
+  }
+  // @include breakpoint(360px) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  // }
+}
+
+.header__icon {
+  display: none;
+
+  @include breakpoint(768px) {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+
+    &::before,
+    &::after,
+    & span {
+      left: 0;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: $black;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    & span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+    }
+
+    &._active span {
+      transform: scale(0) translate(0px, -50%);
+    }
+
+    &._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+  }
+}

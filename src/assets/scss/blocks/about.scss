@@ -1,0 +1,21 @@
+.about {
+  padding: 229px 0 176px 0;
+  background-color: #245852;
+}
+
+.about__block {
+  max-width: 580px;
+
+  &-title {
+    margin-bottom: 33px;
+  }
+
+  &-text {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 39px;
+    color: #fff;
+
+    margin-bottom: 57px;
+  }
+}

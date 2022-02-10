@@ -1,0 +1,64 @@
+.modal__ {
+  &title {
+    position: relative;
+    margin: 0 auto 21px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+
+    width: fit-content;
+
+    &::after {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      content: '';
+      width: 100%;
+
+      border: 0.2px solid black;
+    }
+  }
+
+  &person {
+    margin-bottom: 20px;
+
+    &-avatar {
+      width: 50%;
+      height: 50%;
+
+      object-fit: scale-down;
+    }
+
+    &-name {
+      display: block;
+
+      font-size: 12px;
+      line-height: 19px;
+
+      color: black;
+    }
+  }
+
+  &list {
+    list-style: disc;
+
+    text-align: left;
+  }
+}
+
+.list__ {
+  &title {
+    font-size: 16px;
+    line-height: 25px;
+
+    margin-bottom: 16px;
+  }
+
+  &item {
+    font-size: 11px;
+    line-height: 17px;
+
+    color: black;
+  }
+}
