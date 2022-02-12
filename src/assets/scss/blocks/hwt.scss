@@ -82,7 +82,7 @@
 .hwt__columns-item {
   position: relative;
 
-  max-width: min-content;
+  flex: 1 1 25%;
 
   &:not(:last-child) {
     margin-right: 80px;
@@ -91,14 +91,34 @@
       margin: 0 42px 150px;
     }
   }
+
+  @include breakpoint(1360px) {
+    flex: 0 1 33.3%;
+  }
+
+  @include breakpoint(980px) {
+    &:last-child {
+      margin: 0 42px;
+    }
+  }
+
+  @include breakpoint(800px) {
+    flex: 0 1 100%;
+  }
 }
 
 html body .hwt__columns-item {
   @include breakpoint(980px) {
     max-width: 100%;
     text-align: -webkit-center;
+  }
 
-    margin: 0 0 40px 0;
+  @include breakpoint(480px) {
+    margin: 0 auto !important ;
+
+    &:not(:last-child) {
+      margin-bottom: 60px !important;
+    }
   }
 }
 
@@ -114,6 +134,13 @@ html body .hwt__columns-item {
 
     color: $primary;
     opacity: 0.2;
+
+    @include breakpoint(480px) {
+      top: -100px;
+
+      font-size: 100px;
+      line-height: 200px;
+    }
   }
 
   &-title {
@@ -155,13 +182,11 @@ html body .hwt__columns-item {
 }
 
 .colums__item-img {
-  max-width: 390px;
+  max-width: 100%;
   max-height: 492px;
   object-fit: cover;
 
   & img {
-    @include breakpoint(980px) {
-      max-width: 100%;
-    }
+    max-width: 100%;
   }
 }

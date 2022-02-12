@@ -89,8 +89,16 @@ title: Alivio
     </div>
 
     <div class="about__video">
-      <div class="about__video-overlay"></div>
-      <video src="/src/assets/video/customer-story.mp4" class="about__video-item"></video>
+      <div id="about__video-overlay" class="about__video-overlay">
+        <button id="about__video-btn" class="about__video-btn">
+          <img id="about__btn-icon" width="82" height="82" src="assets/images/story/play-white.svg" alt="Play" />
+        </button>
+      </div>
+
+      <video class="about__video-object" id="about__video">
+        <source src="assets/video/customer-story.mp4" type="video/mp4">
+      </video>
+                         
     </div>
   </div>
   <!-- container -->

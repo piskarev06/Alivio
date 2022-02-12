@@ -24,6 +24,8 @@
     &--mobile {
       display: block;
     }
+
+    display: none;
   }
 }
 
@@ -61,12 +63,6 @@
       margin-bottom: 20px;
     }
   }
-
-  // &--mobile {
-  //   @include breakpoint(321px) {
-  //     margin: 0;
-  //   }
-  // }
 }
 
 .header__menu {
@@ -80,7 +76,6 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    // background-color: rgba(30, 54, 133, 0.6);
     transition: all 0.3s ease 0s;
     overflow: auto;
 
@@ -114,15 +109,9 @@
     width: 100%;
 
     padding: 70px 15px;
-    // margin-left: auto;
 
     z-index: 40;
   }
-  // @include breakpoint(360px) {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  // }
 }
 
 .header__icon {

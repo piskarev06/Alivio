@@ -27,7 +27,7 @@
     <header class="header">
       <div class="container container--header">
         <div class="header__logo">
-          <img src="/assets/images/logo.svg" alt="logo" />
+          <img src="assets/images/logo.svg" alt="logo" />
         </div>
     
         <nav class="nav">
@@ -43,7 +43,7 @@
         <div class="header__menu">
           <div class="header__menu-wrapper">
             <div class="header__logo--mobile">
-              <img src="/assets/images/logo.svg" alt="logo" />
+              <img src="assets/images/logo.svg" alt="logo" />
             </div>
             <nav class="nav--mobile">
               <a data-goto=".how-it-works" class="nav__link nav__link--mobile">How it works</a>
@@ -153,8 +153,16 @@
     </div>
 
     <div class="about__video">
-      <div class="about__video-overlay"></div>
-      <video src="/src/assets/video/customer-story.mp4" class="about__video-item"></video>
+      <div id="about__video-overlay" class="about__video-overlay">
+        <button id="about__video-btn" class="about__video-btn">
+          <img id="about__btn-icon" width="82" height="82" src="assets/images/story/play-white.svg" alt="Play" />
+        </button>
+      </div>
+
+      <video class="about__video-object" id="about__video">
+        <source src="assets/video/customer-story.mp4" type="video/mp4">
+      </video>
+                         
     </div>
   </div>
   <!-- container -->
@@ -220,7 +228,7 @@
       </div>
       <div class="footer__copyright">
         <div class="container container--footer__copyright">
-          <p class="footer__copyright-text">@Copyright text 2020</p>
+          <p class="footer__copyright-text">@Copyright text 2022</p>
         </div>
       </div>
     </footer>
